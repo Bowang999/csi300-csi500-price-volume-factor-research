@@ -66,9 +66,9 @@ def generate_factors(p, benchmark, windows=WINDOWS):
           'KSFT':(div(2*c-h-l,o),'(2C-H-L)/O'), 'KSFT2':(clv,'(2C-H-L)/(H-L)'),
           'OPEN0':(div(o,c),'O/C'),'HIGH0':(div(h,c),'H/C'),'LOW0':(div(l,c),'L/C')}
     for name,(x,formula) in bars.items():
-        yield emit('Q158_'+name,x,1,'K线形态',formula,QLIB_URL)
+        yield emit('Q158_'+name,x,1,'Candlestick patterns',formula,QLIB_URL)
     for n in windows:
-        q=lambda name,x,formula,extra=0,vol=False,red='':emit(f'Q158_{name}{n}',x,n+extra,'Qlib窗口特征',formula,QLIB_URL,'原始成交股数，非复权成交量' if vol else '',red)
+        q=lambda name,x,formula,extra=0,vol=False,red='':emit(f'Q158_{name}{n}',x,n+extra,'Qlib rolling-window features',formula,QLIB_URL,'Observed share volume, not split-adjusted volume' if vol else '',red)
         rw=c.rolling(n,min_periods=n); rwin=r.rolling(n,min_periods=n)
         ma=rw.mean(); sd=rw.std(ddof=1); hi=h.rolling(n,min_periods=n).max(); lo=l.rolling(n,min_periods=n).min()
         center=time-(n-1)/2; cov=(c*time).rolling(n,min_periods=n).sum()-center*rw.sum()
@@ -98,7 +98,7 @@ def generate_factors(p, benchmark, windows=WINDOWS):
                         ('VSUMP',div(vp,vd),'Sum(up deltaV)/Sum(abs(deltaV))',1),('VSUMN',div(vn,vd),'Sum(down deltaV)/Sum(abs(deltaV))',1),('VSUMD',div(vp-vn,vd),'Sum(deltaV)/Sum(abs(deltaV))',1)]
         for name,x,f,extra in volume_features:
             yield q(name,x,f,extra,True,f'Q158_VSUMP{n}' if name in ['VSUMN','VSUMD'] else '')
-        ex=lambda name,x,f,extra=0,red='':emit(f'PV_{name}_{n}',x,n+extra,'量价扩展',f,'Own implementation of documented trailing statistics','',red)
+        ex=lambda name,x,f,extra=0,red='':emit(f'PV_{name}_{n}',x,n+extra,'Price-volume extensions',f,'Own implementation of documented trailing statistics','',red)
         mean=rwin.mean(); std=rwin.std(); am=a.rolling(n,min_periods=n); tu=turn.rolling(n,min_periods=n)
         down=np.sqrt(r.clip(upper=0).pow(2).rolling(n,min_periods=n).mean()); upside=np.sqrt(r.clip(lower=0).pow(2).rolling(n,min_periods=n).mean())
         bm=b.rolling(n,min_periods=n); mvar=bm.var(); beta=div(rwin.cov(b),mvar)
@@ -147,5 +147,5 @@ def generate_factors(p, benchmark, windows=WINDOWS):
         for name,x,f,extra,red in additions:
             if name=='KURT' and n<4: continue
             item=ex(name,x,f,extra,red)
-            if name=='VOLUME_RANK':CATALOG[item[0]]['warning']='原始成交股数，非复权成交量'
+            if name=='VOLUME_RANK':CATALOG[item[0]]['warning']='Observed share volume, not split-adjusted volume'
             yield item

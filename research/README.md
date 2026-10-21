@@ -1,15 +1,15 @@
-# 15模型预测研究 / Prediction research
+# Fifteen-model prediction research
 
-这里只展示预测评价，不包含模型组合收益回测，也不发布历史校准收益预测指标。
+Prediction evaluation only: no model portfolio-return backtest or calibrated-return prediction metrics.
 
-- 历史期：2015—2024，滚动样本外，研究期间已查看。
-- 新时期：2025-01-02至2026-10-15，430个有效交易日；模型预测保存至2026-10-19，末尾尚无完整标签。
-- 每季度仅历史选100个因子，15模型使用一致的特征选择、训练/验证日期和评价标签。不同模型计算预算并非完全相同。
-- 表中R²为小数：0.0027约等于0.27%，不是27%。等权分数尺度与排名目标不同，不能只凭其原生R²进行模型优劣判断。
+- Historical window: 2015–2024, rolling out-of-sample predictions, already viewed during research.
+- New window: 2025-01-02 through 2026-10-15, 430 valid sessions. Predictions extend to 2026-10-19; final labels are not yet complete.
+- Each quarter selects exactly 100 factors using only prior data. All 15 models share feature selection, training/validation dates and evaluation labels. Computational budgets are not identical across models.
+- R² is a decimal: 0.0027 is approximately 0.27%, not 27%. Equal-weight scores have a different scale from the rank target; native R² alone is not a fair model-ranking criterion.
 
 ![RankIC comparison](figures/rankic_comparison.png)
 
-## 历史结果
+## Historical results
 
 | universe   | model          |       IC |   RankIC |   rank_R2 |
 |:-----------|:---------------|---------:|---------:|----------:|
@@ -44,7 +44,7 @@
 | csi500     | equal_weight   | 0.028959 | 0.047153 | -0.624821 |
 | csi500     | tabnet         | 0.025123 | 0.044633 |  0.001514 |
 
-## 新时期结果
+## New-period results
 
 | universe   | model          |        IC |   RankIC |   rank_R2 |
 |:-----------|:---------------|----------:|---------:|----------:|
@@ -79,6 +79,6 @@
 | csi500     | mlp            | -0.001593 | 0.01583  | -0.020776 |
 | csi500     | moe            | -0.002927 | 0.013205 | -0.030079 |
 
-历史CatBoost的IC和RankIC在两市场均居首；新时期沪深300的CatBoost平均IC为负，所有模型的原生排名R²为负。中证500随机森林的RankIC和排名R²领先，但相对等权的RankIC提升较小。这些点估计不能直接证明统计显著优势或可交易利润。新增时期的衰减完整保留。
+CatBoost leads historical mean IC and RankIC in both universes. In the new period, CSI300 CatBoost has negative mean IC, and every model has negative native rank R². CSI500 Random Forest leads RankIC and rank R², but its RankIC improvement over equal weight is small. These point estimates do not establish statistical superiority or executable profits. New-period deterioration is retained in full.
 
-逐年与分期IC表、每日聚合IC序列在results中；它们不是逐股票预测数据。原生排名R²只提供全期汇总，未发布校准后的收益R²。
+Annual/period IC summaries and daily aggregate IC series are in `results`; these are not stock-level predictions. Native rank R² is provided as a full-period summary only; calibrated-return R² is excluded.

@@ -231,18 +231,18 @@ def show_report(r):
     import matplotlib.pyplot as plt
     def md(x):display(Markdown(x))
     a=r['v3_audit'];c=r['config'];sc=r['v3_scenarios']
-    md(f"# V3 | {c['universe']} | {c['factor']}\n\n**理论多空因子研究，不代表可融券执行策略。** 研究期 RankIC 固定方向：{a['direction_from_development']:+d}；全期含研究期内拟合，验证期及已看过的测试期单列。")
-    md('## 0. 1 / 5 / 20交易日调仓对比\n三个策略使用同一研究期方向、因子和成本。首次因子有效后的下一交易日起计，每隔N个交易日调仓；非调仓日股数不变（公司行为除外），每天估值并计提借券费。无法成交的订单不在中途补单，下次计划调仓时按最新前日信号重新决定。成分股中途调出亦等到计划调仓处理。这里是交易日间隔，不是自然周/月。')
+    md(f"# V3 | {c['universe']} | {c['factor']}\n\n**Theoretical long-short factor research, not an executable stock-loan strategy.** Development RankIC direction: {a['direction_from_development']:+d}; full history includes development fitting. Validation and the previously viewed test period are reported separately.")
+    md('## 0. Rebalancing every 1 / 5 / 20 trading sessions\nAll strategies share the development-period direction, factor and costs. Rebalance every N sessions starting the session after the first valid signal. Shares remain unchanged between rebalances except corporate actions; valuation and borrowing fees accrue daily. Unfilled orders are not retried between scheduled rebalances; the next rebalance uses the latest previous-close signal. Index deletions also wait until that rebalance. These are trading-session intervals, not calendar weeks or months.')
     fc=r['frequency_comparison']
     showcols=['CAGR','CAGR_calendar','Sharpe','max_drawdown','daily_two_way_turnover','arithmetic_annual_cost','win_rate','trading_days','official_valid']
-    labels={'CAGR':'年化252(%)','CAGR_calendar':'自然年CAGR(%)','Sharpe':'夏普','max_drawdown':'最大回撤(%)',
-            'daily_two_way_turnover':'平均日双边换手(%)','arithmetic_annual_cost':'年度算术费用拖累(%)','win_rate':'日胜率(%)','trading_days':'实际交易天数','official_valid':'估值有效'}
+    labels={'CAGR':'Annualized 252 (%)','CAGR_calendar':'Calendar CAGR (%)','Sharpe':'Sharpe','max_drawdown':'Max drawdown (%)',
+            'daily_two_way_turnover':'Mean daily two-way turnover (%)','arithmetic_annual_cost':'Annual arithmetic cost drag (%)','win_rate':'Daily win rate (%)','trading_days':'Days with trades','official_valid':'Valuation valid'}
     for name in ['baseline_10bp','conservative_one_price','long_only']:
-        md('### '+name+'：全期（2010–2024）')
+        md('### '+name+': full period (2010–2024)')
         t=fc.xs((name,'FIXED_2010_2024'))[showcols].copy()
         for key in ['CAGR','CAGR_calendar','max_drawdown','daily_two_way_turnover','arithmetic_annual_cost','win_rate']:t[key]*=100
         display(t.rename(columns=labels).round(3))
-    md('多空保守情景：分期比较（以下比例为小数，0.05=5%）')
+    md('Conservative long-short scenario by period (ratios are decimals: 0.05 = 5%)')
     display(fc.xs('conservative_one_price')[showcols].round(5))
     navf=pd.DataFrame({f'{n} trading days':r['frequency_ledgers'][('conservative_one_price',n)].nav.where(r['frequency_ledgers'][('conservative_one_price',n)].official_valid) for n in (1,5,20)})
     fig,axes=plt.subplots(2,1,figsize=(14,8),sharex=True)
@@ -250,23 +250,23 @@ def show_report(r):
     (navf/navf.cummax().clip(lower=1)-1).plot(ax=axes[1],title='Drawdown');plt.tight_layout();plt.show()
     display(r['frequency_yearly'].query("scenario=='conservative_one_price'").set_index(['period','rebalance_days']).drop(columns='scenario').round(3))
     display(r['frequency_audit'])
-    md('IC的1/5/10/20日是预测标签期限，与调仓频率不同；夏普等指标仍从每日净值计算。以下原有V3情景、成本敏感性和滚动方向分析仍为1日调仓。5/20日结果只代表当前起始位置，尚未遍历所有调仓偏移。')
-    md('## 1. 收益总览与净值\nCAGR：252交易日复利年化；CAGR_calendar：首末日期含首日、365.2425天自然年复利。所有比例为小数（0.05=5%）。固定全期、因子有效起点和统一2019–2024比较期同时保留。')
+    md('IC horizons of 1/5/10/20 sessions describe prediction labels, not rebalancing frequency. Sharpe and other performance metrics use daily NAV. The following original V3 scenarios, cost sensitivities and rolling direction analysis use daily rebalancing. Results at 5/20 sessions use the current starting offset, not all possible offsets.')
+    md('## 1. Performance and NAV\nCAGR uses 252-session compound annualization; CAGR_calendar uses inclusive first-to-last calendar dates and 365.2425 days per year. Ratios are decimals (0.05 = 5%). Fixed history, factor-valid-start and the common 2019–2024 window are retained.')
     columns=['CAGR','CAGR_calendar','Sharpe','max_drawdown','daily_two_way_turnover','valid_days','missing_days']
     display(r['v3_comparison'][columns].round(5))
-    md('基准情景逐年结果（买卖各10bp，方向只由研究期确定）')
+    md('Annual baseline results (10 bp on each buy/sell; direction determined only in development)')
     display(pnl_table(sc['baseline_10bp']).round(3))
     nav=pd.DataFrame({k:p.nav.where(p.official_valid) for k,p in sc.items() if k in ['baseline_10bp','historical_stamp_assumed_cost','conservative_one_price','long_only','rolling_direction']})
     fig,axes=plt.subplots(2,1,figsize=(14,8),sharex=True)
     nav.plot(ax=axes[0],title='Research NAV: independent cash ledgers')
     (nav/nav.cummax().clip(lower=1)-1).plot(ax=axes[1],title='Drawdown');plt.tight_layout();plt.show()
-    md('## 2. IC / RankIC\nIC保持原始因子方向；收益总览采用研究期确定方向。标签为t+1至t+h+1真实VWAP，不用close回填。')
+    md('## 2. IC / RankIC\nIC retains the original factor direction; performance uses the development-period direction. Labels use actual VWAP from t+1 to t+h+1, with no close fallback.')
     display(r['ic_summary'].round(5));display(r['yearly_ic'].round(4))
     fig,axes=plt.subplots(1,2,figsize=(14,4))
     r['ic'].RankIC_1d.rolling(63,min_periods=21).mean().plot(ax=axes[0],title='63-day RankIC')
     r['ic'][['IC_1d','RankIC_1d']].cumsum().plot(ax=axes[1],title='Cumulative IC, not NAV');plt.show()
-    md('## 3. 成本与成交审计\n历史情景：卖出印花税2023-08-28前10bp、之后5bp；佣金双边各3bp、滑点双边各2bp为可配置研究假设。滑点按成交额扣现金。**过户费历史尚未完整核实，暂未计入；无最低佣金、冲击成本及历史借券费推定。** 基准各10bp保留。')
-    md('印花税来源：[2008年起卖方千分之一](https://guangdong.chinatax.gov.cn/siteapps/webpage/gdtax/tjjcx/tjjcx_result.jsp?cid=9221d98a85144686a7f321a4b8294701)；[2023年8月28日起减半](https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/yhs/202308/t468451.html)。')
+    md('## 3. Cost and execution audit\nHistorical scenario: sell-side stamp tax of 10 bp before 2023-08-28 and 5 bp thereafter; commission of 3 bp and slippage of 2 bp on each side are configurable research assumptions. Slippage reduces cash according to traded notional. **Historical transfer fees are not fully verified and are omitted, as are minimum commission, market impact and inferred historical borrow fees.** The 10 bp per-side baseline is retained.')
+    md('Stamp-tax sources: [sell-side 10 bp from 2008](https://guangdong.chinatax.gov.cn/siteapps/webpage/gdtax/tjjcx/tjjcx_result.jsp?cid=9221d98a85144686a7f321a4b8294701); [halved from 2023-08-28](https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/yhs/202308/t468451.html).')
     costcols=[x for x in sc['conservative_one_price'].columns if x.endswith('_cost')]
     display((sc['conservative_one_price'][costcols].mean()*252).rename('arithmetic_annual_drag').to_frame())
     display(r['v3_cost_sensitivity'][['CAGR','CAGR_calendar','Sharpe','max_drawdown']].round(5))
@@ -274,16 +274,16 @@ def show_report(r):
     display(pd.Series(a['scenario_first_invalid_date'],name='first_unresolved_valuation_date').to_frame())
     events=[dict(scenario=k,date=e[0],symbol=e[1],issue=e[2],adjusted_units=e[3]) for k,values in a['scenario_valuation_events'].items() for e in values]
     if events:
-        md('**以下对照情景经过未解决的持仓估值：受影响的完整期间收益及情景收益差均不可用，不据此评价因子。**')
+        md('**The following comparison scenarios contain unresolved holding valuations. Affected full-period returns and scenario return differences are unavailable and must not be used to evaluate factors.**')
         display(pd.DataFrame(events))
-    md('一字价保守情景：high=low时买卖都不成交，不声称识别了全部涨跌停。成交量/额为零、价格不可靠等继续禁成交；持仓冻结，不以close假装成交。VWAP-only仅禁用close替代，其他规则相同；收益差为整个独立情景差，包含后续持仓路径变化。')
-    md('## 4. 多头与指数超额\n多头为高分半数股票组内等权、目标100%资金；费用和冻结持仓计入预算，不借现金。相对净值=(多头净值/指数净值)，IR用每日收益差；后复权资产与指数股息口径未确认一致，超额为现有指数口径比较。')
+    md('Conservative single-price scenario: neither buys nor sells execute when high equals low; this does not identify all price limits. Zero volume/notional and unreliable prices continue to block execution. Holdings freeze; close prices do not create fictitious trades. VWAP-only disables close fallback with other rules unchanged. Return differences compare independently simulated paths, including subsequent holding changes.')
+    md('## 4. Long-only and index-relative performance\nLong-only holds the upper-scoring half equally, targeting 100% capital. Costs and frozen holdings consume the budget; no cash borrowing. Relative NAV = long-only NAV / index NAV; information ratio uses daily return differences. Dividend conventions between adjusted assets and the index are not confirmed identical: this is a comparison against the supplied index series.')
     display(r['v3_excess'][['CAGR','CAGR_calendar','Sharpe','max_drawdown','information_ratio','tracking_error']].round(5))
-    md('## 5. 滚动样本外历史重放\n每年仅用此前3年的RankIC确定方向，至少252个有效IC日，剔除在训练截止后才实现的标签；未满足条件时空仓。整个历史已查看，不能称为新的独立测试。跨因子选择仍只许用研究/验证期。')
+    md('## 5. Rolling out-of-sample historical replay\nEach year uses only the preceding three years of RankIC to choose direction, requiring 252 valid IC days and excluding labels realized after the training cutoff. Otherwise stay in cash. The full history has been viewed and is not a new independent test. Cross-factor selection must still use development/validation only.')
     display(r['v3_rolling'])
-    md('## 6. 数据与研究边界\n行业、市值中性化和MAD沿用因子库。历史ST/交易状态字段极稀疏，不猜测0/1含义，不用未来填充。完整涨跌停价、券源、容量、真实股数整手和最低佣金仍缺失。中天金融0.11元及已核实换股政策沿用，保留敏感性。')
+    md('## 6. Data and research limitations\nIndustry/size neutralization and MAD follow the factor library. Historical ST/trading-state fields are sparse: do not guess binary semantics or fill from future records. Complete price limits, stock loans, capacity, actual-share board lots and minimum commissions remain unavailable. Retain the CNY 0.11 Zhongtian valuation and verified share-exchange policies with sensitivity analysis.')
     if len(r['v3_valuation_sensitivity']):
-        md('以下估值敏感性采用研究期确定的方向及一字价保守成交/历史印花税情景，不虚构退出成交。')
+        md('The following valuation sensitivity uses development-period direction, conservative single-price execution and historical stamp taxes; no fictitious exit trades.')
         display(r['v3_valuation_sensitivity'][['raw_valuation','CAGR','max_drawdown']])
     display(r['coverage'].describe().T.round(4))
 

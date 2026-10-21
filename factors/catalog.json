@@ -1,7 +1,7 @@
 [
   {
     "name": "Q158_KMID",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(C-O)/O",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Q158_KLEN",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(H-L)/O",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Q158_KMID2",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(C-O)/(H-L)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Q158_KUP",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(H-max(O,C))/O",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Q158_KUP2",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(H-max(O,C))/(H-L)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Q158_KLOW",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(min(O,C)-L)/O",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Q158_KLOW2",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(min(O,C)-L)/(H-L)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Q158_KSFT",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(2C-H-L)/O",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Q158_KSFT2",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "(2C-H-L)/(H-L)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Q158_OPEN0",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "O/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -101,7 +101,7 @@
   },
   {
     "name": "Q158_HIGH0",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "H/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Q158_LOW0",
-    "family": "K线形态",
+    "family": "Candlestick patterns",
     "lookback": 1,
     "formula": "L/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Q158_ROC3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Q158_MA3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -141,7 +141,7 @@
   },
   {
     "name": "Q158_STD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -151,7 +151,7 @@
   },
   {
     "name": "Q158_BETA3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Q158_RSQR3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -171,7 +171,7 @@
   },
   {
     "name": "Q158_RESI3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Q158_MAX3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -191,7 +191,7 @@
   },
   {
     "name": "Q158_MIN3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Q158_QTLU3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Q158_QTLD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Q158_RANK3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -231,7 +231,7 @@
   },
   {
     "name": "Q158_RSV3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Q158_IMAX3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -251,7 +251,7 @@
   },
   {
     "name": "Q158_IMIN3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Q158_IMXD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -271,7 +271,7 @@
   },
   {
     "name": "Q158_CNTP3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Q158_CNTN3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -291,7 +291,7 @@
   },
   {
     "name": "Q158_CNTD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -301,7 +301,7 @@
   },
   {
     "name": "Q158_SUMP3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -311,7 +311,7 @@
   },
   {
     "name": "Q158_SUMN3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Q158_SUMD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -331,87 +331,87 @@
   },
   {
     "name": "Q158_CORR3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 3,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP3",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD3",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 4,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP3",
     "recommended": false
   },
   {
     "name": "PV_MOM_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -421,7 +421,7 @@
   },
   {
     "name": "PV_RET_MEAN_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -431,7 +431,7 @@
   },
   {
     "name": "PV_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -441,7 +441,7 @@
   },
   {
     "name": "PV_SKEW_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -451,7 +451,7 @@
   },
   {
     "name": "PV_MAXRET_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -461,7 +461,7 @@
   },
   {
     "name": "PV_MINRET_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -471,7 +471,7 @@
   },
   {
     "name": "PV_DOWNSIDE_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -481,7 +481,7 @@
   },
   {
     "name": "PV_UPSIDE_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -491,7 +491,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -501,7 +501,7 @@
   },
   {
     "name": "PV_MEAN_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -511,7 +511,7 @@
   },
   {
     "name": "PV_AMIHUD_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -521,7 +521,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -531,7 +531,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -541,7 +541,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -551,7 +551,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -561,7 +561,7 @@
   },
   {
     "name": "PV_TURN_MEAN_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -571,7 +571,7 @@
   },
   {
     "name": "PV_TURN_STD_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -581,7 +581,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -591,7 +591,7 @@
   },
   {
     "name": "PV_TURN_SKEW_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -601,7 +601,7 @@
   },
   {
     "name": "PV_ATR_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 4,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -611,7 +611,7 @@
   },
   {
     "name": "PV_PARKINSON_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -621,7 +621,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -631,7 +631,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -641,7 +641,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 4,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -651,7 +651,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -661,7 +661,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 4,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -671,7 +671,7 @@
   },
   {
     "name": "PV_AUTOCORR_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 4,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -681,7 +681,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -691,7 +691,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -701,7 +701,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -711,7 +711,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -721,7 +721,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -731,7 +731,7 @@
   },
   {
     "name": "PV_FROM_HIGH_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -741,7 +741,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -751,7 +751,7 @@
   },
   {
     "name": "PV_MARKET_BETA_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -761,7 +761,7 @@
   },
   {
     "name": "PV_MARKET_CORR_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -771,7 +771,7 @@
   },
   {
     "name": "PV_IDIO_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -781,7 +781,7 @@
   },
   {
     "name": "PV_REL_MOM_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -791,7 +791,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -801,7 +801,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -811,17 +811,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_3",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 3,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -831,7 +831,7 @@
   },
   {
     "name": "Q158_MA5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -841,7 +841,7 @@
   },
   {
     "name": "Q158_STD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -851,7 +851,7 @@
   },
   {
     "name": "Q158_BETA5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -861,7 +861,7 @@
   },
   {
     "name": "Q158_RSQR5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -871,7 +871,7 @@
   },
   {
     "name": "Q158_RESI5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -881,7 +881,7 @@
   },
   {
     "name": "Q158_MAX5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -891,7 +891,7 @@
   },
   {
     "name": "Q158_MIN5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -901,7 +901,7 @@
   },
   {
     "name": "Q158_QTLU5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -911,7 +911,7 @@
   },
   {
     "name": "Q158_QTLD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -921,7 +921,7 @@
   },
   {
     "name": "Q158_RANK5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -931,7 +931,7 @@
   },
   {
     "name": "Q158_RSV5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -941,7 +941,7 @@
   },
   {
     "name": "Q158_IMAX5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -951,7 +951,7 @@
   },
   {
     "name": "Q158_IMIN5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -961,7 +961,7 @@
   },
   {
     "name": "Q158_IMXD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -971,7 +971,7 @@
   },
   {
     "name": "Q158_CNTP5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -981,7 +981,7 @@
   },
   {
     "name": "Q158_CNTN5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -991,7 +991,7 @@
   },
   {
     "name": "Q158_CNTD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Q158_SUMP5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Q158_SUMN5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "Q158_SUMD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1031,87 +1031,87 @@
   },
   {
     "name": "Q158_CORR5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 5,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP5",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD5",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 6,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP5",
     "recommended": false
   },
   {
     "name": "PV_MOM_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "PV_RET_MEAN_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "PV_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1141,7 +1141,7 @@
   },
   {
     "name": "PV_SKEW_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "PV_KURT_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "PV_MAXRET_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "PV_MINRET_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "PV_DOWNSIDE_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "PV_UPSIDE_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "PV_MEAN_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "PV_AMIHUD_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1251,7 +1251,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -1271,7 +1271,7 @@
   },
   {
     "name": "PV_TURN_MEAN_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "PV_TURN_STD_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1291,7 +1291,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1301,7 +1301,7 @@
   },
   {
     "name": "PV_TURN_SKEW_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1311,7 +1311,7 @@
   },
   {
     "name": "PV_ATR_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 6,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "PV_PARKINSON_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -1331,7 +1331,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 6,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1371,7 +1371,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 6,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "PV_AUTOCORR_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 6,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1391,7 +1391,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1411,7 +1411,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1421,7 +1421,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1441,7 +1441,7 @@
   },
   {
     "name": "PV_FROM_HIGH_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -1451,7 +1451,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1461,7 +1461,7 @@
   },
   {
     "name": "PV_MARKET_BETA_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "PV_MARKET_CORR_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1481,7 +1481,7 @@
   },
   {
     "name": "PV_IDIO_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -1491,7 +1491,7 @@
   },
   {
     "name": "PV_REL_MOM_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -1501,7 +1501,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1511,7 +1511,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1521,17 +1521,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_5",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 5,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Q158_MA10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1551,7 +1551,7 @@
   },
   {
     "name": "Q158_STD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1561,7 +1561,7 @@
   },
   {
     "name": "Q158_BETA10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1571,7 +1571,7 @@
   },
   {
     "name": "Q158_RSQR10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1581,7 +1581,7 @@
   },
   {
     "name": "Q158_RESI10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "Q158_MAX10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1601,7 +1601,7 @@
   },
   {
     "name": "Q158_MIN10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1611,7 +1611,7 @@
   },
   {
     "name": "Q158_QTLU10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "Q158_QTLD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1631,7 +1631,7 @@
   },
   {
     "name": "Q158_RANK10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1641,7 +1641,7 @@
   },
   {
     "name": "Q158_RSV10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "Q158_IMAX10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1661,7 +1661,7 @@
   },
   {
     "name": "Q158_IMIN10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1671,7 +1671,7 @@
   },
   {
     "name": "Q158_IMXD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "Q158_CNTP10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1691,7 +1691,7 @@
   },
   {
     "name": "Q158_CNTN10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1701,7 +1701,7 @@
   },
   {
     "name": "Q158_CNTD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "Q158_SUMP10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1721,7 +1721,7 @@
   },
   {
     "name": "Q158_SUMN10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1731,7 +1731,7 @@
   },
   {
     "name": "Q158_SUMD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -1741,87 +1741,87 @@
   },
   {
     "name": "Q158_CORR10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 10,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP10",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD10",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 11,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP10",
     "recommended": false
   },
   {
     "name": "PV_MOM_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -1831,7 +1831,7 @@
   },
   {
     "name": "PV_RET_MEAN_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1841,7 +1841,7 @@
   },
   {
     "name": "PV_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1851,7 +1851,7 @@
   },
   {
     "name": "PV_SKEW_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1861,7 +1861,7 @@
   },
   {
     "name": "PV_KURT_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1871,7 +1871,7 @@
   },
   {
     "name": "PV_MAXRET_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1881,7 +1881,7 @@
   },
   {
     "name": "PV_MINRET_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "PV_DOWNSIDE_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1901,7 +1901,7 @@
   },
   {
     "name": "PV_UPSIDE_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -1911,7 +1911,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "PV_MEAN_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1931,7 +1931,7 @@
   },
   {
     "name": "PV_AMIHUD_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -1941,7 +1941,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1961,7 +1961,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1971,7 +1971,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "PV_TURN_MEAN_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -1991,7 +1991,7 @@
   },
   {
     "name": "PV_TURN_STD_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2001,7 +2001,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2011,7 +2011,7 @@
   },
   {
     "name": "PV_TURN_SKEW_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2021,7 +2021,7 @@
   },
   {
     "name": "PV_ATR_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 11,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2031,7 +2031,7 @@
   },
   {
     "name": "PV_PARKINSON_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -2041,7 +2041,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -2051,7 +2051,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2061,7 +2061,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 11,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2071,7 +2071,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2081,7 +2081,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 11,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2091,7 +2091,7 @@
   },
   {
     "name": "PV_AUTOCORR_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 11,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2101,7 +2101,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2111,7 +2111,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2121,7 +2121,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2131,7 +2131,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2141,7 +2141,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2151,7 +2151,7 @@
   },
   {
     "name": "PV_FROM_HIGH_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -2161,7 +2161,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2171,7 +2171,7 @@
   },
   {
     "name": "PV_MARKET_BETA_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2181,7 +2181,7 @@
   },
   {
     "name": "PV_MARKET_CORR_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2191,7 +2191,7 @@
   },
   {
     "name": "PV_IDIO_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "PV_REL_MOM_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2211,7 +2211,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2221,7 +2221,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2231,17 +2231,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_10",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 10,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2251,7 +2251,7 @@
   },
   {
     "name": "Q158_MA20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2261,7 +2261,7 @@
   },
   {
     "name": "Q158_STD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2271,7 +2271,7 @@
   },
   {
     "name": "Q158_BETA20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2281,7 +2281,7 @@
   },
   {
     "name": "Q158_RSQR20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2291,7 +2291,7 @@
   },
   {
     "name": "Q158_RESI20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2301,7 +2301,7 @@
   },
   {
     "name": "Q158_MAX20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2311,7 +2311,7 @@
   },
   {
     "name": "Q158_MIN20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2321,7 +2321,7 @@
   },
   {
     "name": "Q158_QTLU20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2331,7 +2331,7 @@
   },
   {
     "name": "Q158_QTLD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2341,7 +2341,7 @@
   },
   {
     "name": "Q158_RANK20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2351,7 +2351,7 @@
   },
   {
     "name": "Q158_RSV20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2361,7 +2361,7 @@
   },
   {
     "name": "Q158_IMAX20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2371,7 +2371,7 @@
   },
   {
     "name": "Q158_IMIN20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2381,7 +2381,7 @@
   },
   {
     "name": "Q158_IMXD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2391,7 +2391,7 @@
   },
   {
     "name": "Q158_CNTP20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2401,7 +2401,7 @@
   },
   {
     "name": "Q158_CNTN20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2411,7 +2411,7 @@
   },
   {
     "name": "Q158_CNTD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2421,7 +2421,7 @@
   },
   {
     "name": "Q158_SUMP20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2431,7 +2431,7 @@
   },
   {
     "name": "Q158_SUMN20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2441,7 +2441,7 @@
   },
   {
     "name": "Q158_SUMD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2451,87 +2451,87 @@
   },
   {
     "name": "Q158_CORR20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 20,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP20",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD20",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 21,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP20",
     "recommended": false
   },
   {
     "name": "PV_MOM_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2541,7 +2541,7 @@
   },
   {
     "name": "PV_RET_MEAN_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2551,7 +2551,7 @@
   },
   {
     "name": "PV_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2561,7 +2561,7 @@
   },
   {
     "name": "PV_SKEW_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2571,7 +2571,7 @@
   },
   {
     "name": "PV_KURT_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2581,7 +2581,7 @@
   },
   {
     "name": "PV_MAXRET_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2591,7 +2591,7 @@
   },
   {
     "name": "PV_MINRET_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2601,7 +2601,7 @@
   },
   {
     "name": "PV_DOWNSIDE_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2611,7 +2611,7 @@
   },
   {
     "name": "PV_UPSIDE_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2621,7 +2621,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -2631,7 +2631,7 @@
   },
   {
     "name": "PV_MEAN_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2641,7 +2641,7 @@
   },
   {
     "name": "PV_AMIHUD_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -2651,7 +2651,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -2661,7 +2661,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2671,7 +2671,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2681,7 +2681,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -2691,7 +2691,7 @@
   },
   {
     "name": "PV_TURN_MEAN_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2701,7 +2701,7 @@
   },
   {
     "name": "PV_TURN_STD_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2711,7 +2711,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2721,7 +2721,7 @@
   },
   {
     "name": "PV_TURN_SKEW_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2731,7 +2731,7 @@
   },
   {
     "name": "PV_ATR_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 21,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2741,7 +2741,7 @@
   },
   {
     "name": "PV_PARKINSON_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -2751,7 +2751,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -2761,7 +2761,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2771,7 +2771,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 21,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2781,7 +2781,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2791,7 +2791,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 21,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2801,7 +2801,7 @@
   },
   {
     "name": "PV_AUTOCORR_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 21,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2811,7 +2811,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2821,7 +2821,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2831,7 +2831,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2841,7 +2841,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2851,7 +2851,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2861,7 +2861,7 @@
   },
   {
     "name": "PV_FROM_HIGH_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -2871,7 +2871,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2881,7 +2881,7 @@
   },
   {
     "name": "PV_MARKET_BETA_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2891,7 +2891,7 @@
   },
   {
     "name": "PV_MARKET_CORR_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2901,7 +2901,7 @@
   },
   {
     "name": "PV_IDIO_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -2911,7 +2911,7 @@
   },
   {
     "name": "PV_REL_MOM_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -2921,7 +2921,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -2931,7 +2931,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -2941,17 +2941,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_20",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 20,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2961,7 +2961,7 @@
   },
   {
     "name": "Q158_MA30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2971,7 +2971,7 @@
   },
   {
     "name": "Q158_STD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2981,7 +2981,7 @@
   },
   {
     "name": "Q158_BETA30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -2991,7 +2991,7 @@
   },
   {
     "name": "Q158_RSQR30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3001,7 +3001,7 @@
   },
   {
     "name": "Q158_RESI30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3011,7 +3011,7 @@
   },
   {
     "name": "Q158_MAX30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3021,7 +3021,7 @@
   },
   {
     "name": "Q158_MIN30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3031,7 +3031,7 @@
   },
   {
     "name": "Q158_QTLU30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3041,7 +3041,7 @@
   },
   {
     "name": "Q158_QTLD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3051,7 +3051,7 @@
   },
   {
     "name": "Q158_RANK30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3061,7 +3061,7 @@
   },
   {
     "name": "Q158_RSV30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3071,7 +3071,7 @@
   },
   {
     "name": "Q158_IMAX30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3081,7 +3081,7 @@
   },
   {
     "name": "Q158_IMIN30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3091,7 +3091,7 @@
   },
   {
     "name": "Q158_IMXD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3101,7 +3101,7 @@
   },
   {
     "name": "Q158_CNTP30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3111,7 +3111,7 @@
   },
   {
     "name": "Q158_CNTN30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3121,7 +3121,7 @@
   },
   {
     "name": "Q158_CNTD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3131,7 +3131,7 @@
   },
   {
     "name": "Q158_SUMP30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3141,7 +3141,7 @@
   },
   {
     "name": "Q158_SUMN30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3151,7 +3151,7 @@
   },
   {
     "name": "Q158_SUMD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3161,87 +3161,87 @@
   },
   {
     "name": "Q158_CORR30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 30,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP30",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD30",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 31,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP30",
     "recommended": false
   },
   {
     "name": "PV_MOM_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -3251,7 +3251,7 @@
   },
   {
     "name": "PV_RET_MEAN_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3261,7 +3261,7 @@
   },
   {
     "name": "PV_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3271,7 +3271,7 @@
   },
   {
     "name": "PV_SKEW_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3281,7 +3281,7 @@
   },
   {
     "name": "PV_KURT_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3291,7 +3291,7 @@
   },
   {
     "name": "PV_MAXRET_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3301,7 +3301,7 @@
   },
   {
     "name": "PV_MINRET_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3311,7 +3311,7 @@
   },
   {
     "name": "PV_DOWNSIDE_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3321,7 +3321,7 @@
   },
   {
     "name": "PV_UPSIDE_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3331,7 +3331,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -3341,7 +3341,7 @@
   },
   {
     "name": "PV_MEAN_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3351,7 +3351,7 @@
   },
   {
     "name": "PV_AMIHUD_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -3361,7 +3361,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -3371,7 +3371,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3381,7 +3381,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3391,7 +3391,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -3401,7 +3401,7 @@
   },
   {
     "name": "PV_TURN_MEAN_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3411,7 +3411,7 @@
   },
   {
     "name": "PV_TURN_STD_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3421,7 +3421,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3431,7 +3431,7 @@
   },
   {
     "name": "PV_TURN_SKEW_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3441,7 +3441,7 @@
   },
   {
     "name": "PV_ATR_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 31,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3451,7 +3451,7 @@
   },
   {
     "name": "PV_PARKINSON_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -3461,7 +3461,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -3471,7 +3471,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -3481,7 +3481,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 31,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -3491,7 +3491,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3501,7 +3501,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 31,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3511,7 +3511,7 @@
   },
   {
     "name": "PV_AUTOCORR_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 31,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3521,7 +3521,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3531,7 +3531,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3541,7 +3541,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3551,7 +3551,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3561,7 +3561,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3571,7 +3571,7 @@
   },
   {
     "name": "PV_FROM_HIGH_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -3581,7 +3581,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3591,7 +3591,7 @@
   },
   {
     "name": "PV_MARKET_BETA_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3601,7 +3601,7 @@
   },
   {
     "name": "PV_MARKET_CORR_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3611,7 +3611,7 @@
   },
   {
     "name": "PV_IDIO_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -3621,7 +3621,7 @@
   },
   {
     "name": "PV_REL_MOM_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -3631,7 +3631,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3641,7 +3641,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3651,17 +3651,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_30",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 30,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3671,7 +3671,7 @@
   },
   {
     "name": "Q158_MA60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3681,7 +3681,7 @@
   },
   {
     "name": "Q158_STD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3691,7 +3691,7 @@
   },
   {
     "name": "Q158_BETA60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3701,7 +3701,7 @@
   },
   {
     "name": "Q158_RSQR60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3711,7 +3711,7 @@
   },
   {
     "name": "Q158_RESI60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3721,7 +3721,7 @@
   },
   {
     "name": "Q158_MAX60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3731,7 +3731,7 @@
   },
   {
     "name": "Q158_MIN60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3741,7 +3741,7 @@
   },
   {
     "name": "Q158_QTLU60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3751,7 +3751,7 @@
   },
   {
     "name": "Q158_QTLD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3761,7 +3761,7 @@
   },
   {
     "name": "Q158_RANK60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3771,7 +3771,7 @@
   },
   {
     "name": "Q158_RSV60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3781,7 +3781,7 @@
   },
   {
     "name": "Q158_IMAX60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3791,7 +3791,7 @@
   },
   {
     "name": "Q158_IMIN60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3801,7 +3801,7 @@
   },
   {
     "name": "Q158_IMXD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3811,7 +3811,7 @@
   },
   {
     "name": "Q158_CNTP60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3821,7 +3821,7 @@
   },
   {
     "name": "Q158_CNTN60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3831,7 +3831,7 @@
   },
   {
     "name": "Q158_CNTD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3841,7 +3841,7 @@
   },
   {
     "name": "Q158_SUMP60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3851,7 +3851,7 @@
   },
   {
     "name": "Q158_SUMN60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3861,7 +3861,7 @@
   },
   {
     "name": "Q158_SUMD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -3871,87 +3871,87 @@
   },
   {
     "name": "Q158_CORR60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 60,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP60",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD60",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 61,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP60",
     "recommended": false
   },
   {
     "name": "PV_MOM_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -3961,7 +3961,7 @@
   },
   {
     "name": "PV_RET_MEAN_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3971,7 +3971,7 @@
   },
   {
     "name": "PV_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -3981,7 +3981,7 @@
   },
   {
     "name": "PV_SKEW_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -3991,7 +3991,7 @@
   },
   {
     "name": "PV_KURT_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4001,7 +4001,7 @@
   },
   {
     "name": "PV_MAXRET_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4011,7 +4011,7 @@
   },
   {
     "name": "PV_MINRET_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4021,7 +4021,7 @@
   },
   {
     "name": "PV_DOWNSIDE_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4031,7 +4031,7 @@
   },
   {
     "name": "PV_UPSIDE_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4041,7 +4041,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -4051,7 +4051,7 @@
   },
   {
     "name": "PV_MEAN_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4061,7 +4061,7 @@
   },
   {
     "name": "PV_AMIHUD_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -4071,7 +4071,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -4081,7 +4081,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4091,7 +4091,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4101,7 +4101,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -4111,7 +4111,7 @@
   },
   {
     "name": "PV_TURN_MEAN_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4121,7 +4121,7 @@
   },
   {
     "name": "PV_TURN_STD_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4131,7 +4131,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4141,7 +4141,7 @@
   },
   {
     "name": "PV_TURN_SKEW_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4151,7 +4151,7 @@
   },
   {
     "name": "PV_ATR_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 61,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4161,7 +4161,7 @@
   },
   {
     "name": "PV_PARKINSON_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -4171,7 +4171,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -4181,7 +4181,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4191,7 +4191,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 61,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4201,7 +4201,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4211,7 +4211,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 61,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4221,7 +4221,7 @@
   },
   {
     "name": "PV_AUTOCORR_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 61,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4231,7 +4231,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4241,7 +4241,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4251,7 +4251,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4261,7 +4261,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4271,7 +4271,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4281,7 +4281,7 @@
   },
   {
     "name": "PV_FROM_HIGH_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -4291,7 +4291,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4301,7 +4301,7 @@
   },
   {
     "name": "PV_MARKET_BETA_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4311,7 +4311,7 @@
   },
   {
     "name": "PV_MARKET_CORR_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4321,7 +4321,7 @@
   },
   {
     "name": "PV_IDIO_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -4331,7 +4331,7 @@
   },
   {
     "name": "PV_REL_MOM_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4341,7 +4341,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4351,7 +4351,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4361,17 +4361,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_60",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 60,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4381,7 +4381,7 @@
   },
   {
     "name": "Q158_MA120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4391,7 +4391,7 @@
   },
   {
     "name": "Q158_STD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4401,7 +4401,7 @@
   },
   {
     "name": "Q158_BETA120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4411,7 +4411,7 @@
   },
   {
     "name": "Q158_RSQR120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4421,7 +4421,7 @@
   },
   {
     "name": "Q158_RESI120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4431,7 +4431,7 @@
   },
   {
     "name": "Q158_MAX120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4441,7 +4441,7 @@
   },
   {
     "name": "Q158_MIN120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4451,7 +4451,7 @@
   },
   {
     "name": "Q158_QTLU120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4461,7 +4461,7 @@
   },
   {
     "name": "Q158_QTLD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4471,7 +4471,7 @@
   },
   {
     "name": "Q158_RANK120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4481,7 +4481,7 @@
   },
   {
     "name": "Q158_RSV120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4491,7 +4491,7 @@
   },
   {
     "name": "Q158_IMAX120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4501,7 +4501,7 @@
   },
   {
     "name": "Q158_IMIN120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4511,7 +4511,7 @@
   },
   {
     "name": "Q158_IMXD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4521,7 +4521,7 @@
   },
   {
     "name": "Q158_CNTP120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4531,7 +4531,7 @@
   },
   {
     "name": "Q158_CNTN120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4541,7 +4541,7 @@
   },
   {
     "name": "Q158_CNTD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4551,7 +4551,7 @@
   },
   {
     "name": "Q158_SUMP120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4561,7 +4561,7 @@
   },
   {
     "name": "Q158_SUMN120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4571,7 +4571,7 @@
   },
   {
     "name": "Q158_SUMD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -4581,87 +4581,87 @@
   },
   {
     "name": "Q158_CORR120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 120,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP120",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD120",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 121,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP120",
     "recommended": false
   },
   {
     "name": "PV_MOM_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4671,7 +4671,7 @@
   },
   {
     "name": "PV_RET_MEAN_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4681,7 +4681,7 @@
   },
   {
     "name": "PV_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4691,7 +4691,7 @@
   },
   {
     "name": "PV_SKEW_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4701,7 +4701,7 @@
   },
   {
     "name": "PV_KURT_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4711,7 +4711,7 @@
   },
   {
     "name": "PV_MAXRET_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4721,7 +4721,7 @@
   },
   {
     "name": "PV_MINRET_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4731,7 +4731,7 @@
   },
   {
     "name": "PV_DOWNSIDE_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4741,7 +4741,7 @@
   },
   {
     "name": "PV_UPSIDE_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4751,7 +4751,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -4761,7 +4761,7 @@
   },
   {
     "name": "PV_MEAN_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4771,7 +4771,7 @@
   },
   {
     "name": "PV_AMIHUD_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -4781,7 +4781,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -4791,7 +4791,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4801,7 +4801,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4811,7 +4811,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -4821,7 +4821,7 @@
   },
   {
     "name": "PV_TURN_MEAN_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4831,7 +4831,7 @@
   },
   {
     "name": "PV_TURN_STD_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4841,7 +4841,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4851,7 +4851,7 @@
   },
   {
     "name": "PV_TURN_SKEW_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4861,7 +4861,7 @@
   },
   {
     "name": "PV_ATR_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 121,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4871,7 +4871,7 @@
   },
   {
     "name": "PV_PARKINSON_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -4881,7 +4881,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -4891,7 +4891,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4901,7 +4901,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 121,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -4911,7 +4911,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4921,7 +4921,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 121,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -4931,7 +4931,7 @@
   },
   {
     "name": "PV_AUTOCORR_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 121,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4941,7 +4941,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4951,7 +4951,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4961,7 +4961,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4971,7 +4971,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4981,7 +4981,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -4991,7 +4991,7 @@
   },
   {
     "name": "PV_FROM_HIGH_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -5001,7 +5001,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5011,7 +5011,7 @@
   },
   {
     "name": "PV_MARKET_BETA_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5021,7 +5021,7 @@
   },
   {
     "name": "PV_MARKET_CORR_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5031,7 +5031,7 @@
   },
   {
     "name": "PV_IDIO_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -5041,7 +5041,7 @@
   },
   {
     "name": "PV_REL_MOM_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -5051,7 +5051,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5061,7 +5061,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5071,17 +5071,17 @@
   },
   {
     "name": "PV_VOLUME_RANK_120",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 120,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_ROC252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Ref(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5091,7 +5091,7 @@
   },
   {
     "name": "Q158_MA252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Mean(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5101,7 +5101,7 @@
   },
   {
     "name": "Q158_STD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Std(C,n,ddof=1)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5111,7 +5111,7 @@
   },
   {
     "name": "Q158_BETA252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "OLS time slope(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5121,7 +5121,7 @@
   },
   {
     "name": "Q158_RSQR252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "OLS time regression R2(C,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5131,7 +5131,7 @@
   },
   {
     "name": "Q158_RESI252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "OLS last residual(C,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5141,7 +5141,7 @@
   },
   {
     "name": "Q158_MAX252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Max(H,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5151,7 +5151,7 @@
   },
   {
     "name": "Q158_MIN252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Min(L,n)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5161,7 +5161,7 @@
   },
   {
     "name": "Q158_QTLU252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Quantile(C,n,0.8)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5171,7 +5171,7 @@
   },
   {
     "name": "Q158_QTLD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Quantile(C,n,0.2)/C",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5181,7 +5181,7 @@
   },
   {
     "name": "Q158_RANK252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Trailing average-tie rank(C,n)/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5191,7 +5191,7 @@
   },
   {
     "name": "Q158_RSV252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "(C-Min(L,n))/(Max(H,n)-Min(L,n))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5201,7 +5201,7 @@
   },
   {
     "name": "Q158_IMAX252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "first argmax(H,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5211,7 +5211,7 @@
   },
   {
     "name": "Q158_IMIN252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "first argmin(L,n), one-based/n",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5221,7 +5221,7 @@
   },
   {
     "name": "Q158_IMXD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "IMAX-IMIN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5231,7 +5231,7 @@
   },
   {
     "name": "Q158_CNTP252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Mean(R>0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5241,7 +5241,7 @@
   },
   {
     "name": "Q158_CNTN252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Mean(R<0,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5251,7 +5251,7 @@
   },
   {
     "name": "Q158_CNTD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "CNTP-CNTN",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5261,7 +5261,7 @@
   },
   {
     "name": "Q158_SUMP252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Sum(max(deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5271,7 +5271,7 @@
   },
   {
     "name": "Q158_SUMN252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Sum(max(-deltaC,0),n)/Sum(abs(deltaC),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5281,7 +5281,7 @@
   },
   {
     "name": "Q158_SUMD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "(Sum(up deltaC)-Sum(down deltaC))/Sum(abs(deltaC))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
@@ -5291,87 +5291,87 @@
   },
   {
     "name": "Q158_CORR252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Corr(C,log(1+V),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_CORD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Corr(R,log(1+V/Ref(V,1)),n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VMA252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Mean(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSTD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Std(V,n)/V",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_WVMA252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 252,
     "formula": "Std(abs(R)*V,n)/Mean(abs(R)*V,n)",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMP252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Sum(up deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
   {
     "name": "Q158_VSUMN252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Sum(down deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP252",
     "recommended": false
   },
   {
     "name": "Q158_VSUMD252",
-    "family": "Qlib窗口特征",
+    "family": "Qlib rolling-window features",
     "lookback": 253,
     "formula": "Sum(deltaV)/Sum(abs(deltaV))",
     "source": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/loader.py",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "Q158_VSUMP252",
     "recommended": false
   },
   {
     "name": "PV_MOM_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "exp(Sum(log(1+R),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -5381,7 +5381,7 @@
   },
   {
     "name": "PV_RET_MEAN_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Mean(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5391,7 +5391,7 @@
   },
   {
     "name": "PV_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Std(R,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5401,7 +5401,7 @@
   },
   {
     "name": "PV_SKEW_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Sample skewness(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5411,7 +5411,7 @@
   },
   {
     "name": "PV_KURT_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Unbiased excess kurtosis(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5421,7 +5421,7 @@
   },
   {
     "name": "PV_MAXRET_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Max(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5431,7 +5431,7 @@
   },
   {
     "name": "PV_MINRET_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Min(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5441,7 +5441,7 @@
   },
   {
     "name": "PV_DOWNSIDE_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "sqrt(Mean(min(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5451,7 +5451,7 @@
   },
   {
     "name": "PV_UPSIDE_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "sqrt(Mean(max(R,0)^2,n)*252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5461,7 +5461,7 @@
   },
   {
     "name": "PV_DOWN_UP_RATIO_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Downside_RMS/Upside_RMS",
     "source": "Own implementation of documented trailing statistics",
@@ -5471,7 +5471,7 @@
   },
   {
     "name": "PV_MEAN_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Mean(R,n)/Std(R,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5481,7 +5481,7 @@
   },
   {
     "name": "PV_AMIHUD_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Mean(abs(R)/amount, >=ceil(0.8n) positive-amount days)*1e8",
     "source": "Own implementation of documented trailing statistics",
@@ -5491,7 +5491,7 @@
   },
   {
     "name": "PV_LOG_AMOUNT_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "log(1+Mean(amount,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -5501,7 +5501,7 @@
   },
   {
     "name": "PV_AMOUNT_CV_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Std(amount,n)/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5511,7 +5511,7 @@
   },
   {
     "name": "PV_AMOUNT_SHOCK_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "amount/Mean(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5521,7 +5521,7 @@
   },
   {
     "name": "PV_AMOUNT_RANK_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Trailing rank(amount,n)/n",
     "source": "Own implementation of documented trailing statistics",
@@ -5531,7 +5531,7 @@
   },
   {
     "name": "PV_TURN_MEAN_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Mean(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5541,7 +5541,7 @@
   },
   {
     "name": "PV_TURN_STD_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Std(volume/total_shares,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5551,7 +5551,7 @@
   },
   {
     "name": "PV_TURN_SHOCK_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "turnover_total/Mean(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5561,7 +5561,7 @@
   },
   {
     "name": "PV_TURN_SKEW_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Skew(turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5571,7 +5571,7 @@
   },
   {
     "name": "PV_ATR_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 253,
     "formula": "Mean(max(H-L,abs(H-Cprev),abs(L-Cprev))/Cprev,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5581,7 +5581,7 @@
   },
   {
     "name": "PV_PARKINSON_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "sqrt(Mean(log(H/L)^2,n)*252/(4log2))",
     "source": "Own implementation of documented trailing statistics",
@@ -5591,7 +5591,7 @@
   },
   {
     "name": "PV_GARMAN_KLASS_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "sqrt(252*Mean(0.5log(H/L)^2-(2log2-1)log(C/O)^2,n))",
     "source": "Own implementation of documented trailing statistics",
@@ -5601,7 +5601,7 @@
   },
   {
     "name": "PV_INTRADAY_MOM_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "exp(Sum(log(C/O),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -5611,7 +5611,7 @@
   },
   {
     "name": "PV_OVERNIGHT_MOM_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 253,
     "formula": "exp(Sum(log(O/Cprev),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -5621,7 +5621,7 @@
   },
   {
     "name": "PV_INTRADAY_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Std(C/O-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5631,7 +5631,7 @@
   },
   {
     "name": "PV_OVERNIGHT_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 253,
     "formula": "Std(O/Cprev-1,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5641,7 +5641,7 @@
   },
   {
     "name": "PV_AUTOCORR_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 253,
     "formula": "Corr(R,Ref(R,1),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5651,7 +5651,7 @@
   },
   {
     "name": "PV_RET_AMOUNT_CORR_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Corr(R,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5661,7 +5661,7 @@
   },
   {
     "name": "PV_RET_TURN_CORR_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Corr(R,turnover_total,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5671,7 +5671,7 @@
   },
   {
     "name": "PV_MONEY_FLOW_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Sum(((2C-H-L)/(H-L))*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5681,7 +5681,7 @@
   },
   {
     "name": "PV_SIGNED_AMOUNT_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Sum(sign(R)*amount,n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5691,7 +5691,7 @@
   },
   {
     "name": "PV_UP_AMOUNT_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Sum(amount*1[R>0],n)/Sum(amount,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5701,7 +5701,7 @@
   },
   {
     "name": "PV_FROM_HIGH_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "C/Max(C,n)-1; not maximum drawdown",
     "source": "Own implementation of documented trailing statistics",
@@ -5711,7 +5711,7 @@
   },
   {
     "name": "PV_ZERO_VOLUME_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Mean(1[V=0],n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5721,7 +5721,7 @@
   },
   {
     "name": "PV_MARKET_BETA_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Cov(R,index_ret,n)/Var(index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5731,7 +5731,7 @@
   },
   {
     "name": "PV_MARKET_CORR_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Corr(R,index_ret,n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5741,7 +5741,7 @@
   },
   {
     "name": "PV_IDIO_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "sqrt(252*(Var(R)-beta^2*Var(index_ret)))",
     "source": "Own implementation of documented trailing statistics",
@@ -5751,7 +5751,7 @@
   },
   {
     "name": "PV_REL_MOM_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "exp(Sum(log(1+R)-log(1+index_ret),n))-1",
     "source": "Own implementation of documented trailing statistics",
@@ -5761,7 +5761,7 @@
   },
   {
     "name": "PV_TRACKING_VOL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Std(R-index_ret,n)*sqrt(252)",
     "source": "Own implementation of documented trailing statistics",
@@ -5771,7 +5771,7 @@
   },
   {
     "name": "PV_CORR_AMOUNT_LEVEL_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Corr(C,log(1+amount),n)",
     "source": "Own implementation of documented trailing statistics",
@@ -5781,11 +5781,11 @@
   },
   {
     "name": "PV_VOLUME_RANK_252",
-    "family": "量价扩展",
+    "family": "Price-volume extensions",
     "lookback": 252,
     "formula": "Trailing rank(raw volume,n)/n",
     "source": "Own implementation of documented trailing statistics",
-    "warning": "原始成交股数，非复权成交量",
+    "warning": "Observed share volume, not split-adjusted volume",
     "redundant_with": "",
     "recommended": true
   },
