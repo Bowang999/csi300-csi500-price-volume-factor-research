@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    "no_trade_cash_unchanged",
+    "single_buy_sell_exact_cash_fees",
+    "long_short_flip_two_way_turnover",
+    "suspension_freeze_then_real_exit",
+    "share_conversion_no_fictitious_trade",
+    "long_only_fee_reserved_no_cash_borrowing",
+    "blocked_buy_stays_cash",
+    "dated_stamp_and_cost_component_reconciliation",
+    "compounding_calendar_sharpe_drawdown_handcheck",
+    "nonzero_sharpe_ddof1_and_initial_nav_drawdown",
+    "rolling_direction_future_perturbation_and_purge",
+    "delisted_estimated_mark_no_sale",
+    "5_20_day_fixed_units_and_exact_schedule",
+    "off_schedule_signals_do_not_change_holdings",
+    "daily_schedule_exact_backward_compatibility",
+    "blocked_order_waits_until_next_scheduled_day",
+    "daily_borrow_charge_between_rebalances",
+    "corporate_conversion_between_rebalances",
+    "insolvent_cost_stress_brackets_loss_without_aborting_report"
+  ],
+  "engine_sha256": "00336e8715fefd8eaf0a43e993a2b06153ff8afaa471b71ea05b8ca53cb58f06"
+}

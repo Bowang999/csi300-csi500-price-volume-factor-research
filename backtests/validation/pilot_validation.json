@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "engine_sha256": "00336e8715fefd8eaf0a43e993a2b06153ff8afaa471b71ea05b8ca53cb58f06",
+  "checks": [
+    {
+      "factor": "PV_MOM_5",
+      "universe": "csi300",
+      "accounting_pass": true,
+      "seconds": 59.42935585975647,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": false,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    },
+    {
+      "factor": "HT101_045",
+      "universe": "csi300",
+      "accounting_pass": true,
+      "seconds": 70.73500537872314,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": false,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    },
+    {
+      "factor": "GTJA191_113",
+      "universe": "csi300",
+      "accounting_pass": true,
+      "seconds": 50.30827593803406,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": false,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    },
+    {
+      "factor": "PV_MOM_5",
+      "universe": "csi500",
+      "accounting_pass": true,
+      "seconds": 96.24544715881348,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": true,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    },
+    {
+      "factor": "HT101_085",
+      "universe": "csi500",
+      "accounting_pass": true,
+      "seconds": 87.0971565246582,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": true,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    },
+    {
+      "factor": "GTJA191_115",
+      "universe": "csi500",
+      "accounting_pass": true,
+      "seconds": 66.3225359916687,
+      "scenarios_valid": {
+        "baseline_10bp": true,
+        "historical_stamp_assumed_cost": true,
+        "conservative_one_price": true,
+        "vwap_only": true,
+        "long_only": true,
+        "rolling_direction": true,
+        "zero_cost": true
+      }
+    }
+  ],
+  "no_return_based_selection": true
+}

@@ -1,0 +1,14 @@
+{
+  "total": 1706,
+  "csi300": 852,
+  "csi500": 854,
+  "changed_reruns": 154,
+  "unchanged_pilot_reruns": 2,
+  "reused": 1550,
+  "rebalance_days": [
+    1,
+    5,
+    20
+  ],
+  "limitation": "Unchanged outputs reused by explicit decision; original full-input hashes unavailable. Current factor values were checked for equality. Do not claim all outputs were regenerated."
+}

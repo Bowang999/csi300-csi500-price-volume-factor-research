@@ -1,0 +1,38 @@
+{
+  "models": [
+    "equal_weight",
+    "ridge",
+    "lasso",
+    "elastic_net",
+    "pca_ridge",
+    "pls",
+    "random_forest",
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "mlp",
+    "resnet",
+    "tabnet",
+    "ft_transformer",
+    "moe"
+  ],
+  "factor_count": 100,
+  "evaluation": "2015-2024 retrospective; selection and tuning confined to prior realized labels",
+  "label": "VWAP(t+2)/VWAP(t+1)-1; both endpoint quality ok_hfq; predict cross-sectional rank, evaluate against RAW return",
+  "selection": "rolling3years daily PearsonIC; coverage>=80%, ICvalid>=80% training sessions; absolute meanIC order; direction from same training fold",
+  "correlation": "prioritize representatives with abs mean daily rank correlation <0.90; backfill by absoluteIC to exactly100 if needed; log backfill",
+  "inner_validation": "last20% historical dates; purge exit>=validation start; separate inner factor selection; final outer refit reselects100",
+  "training": "sample every fifth date, ALL eligible stocks on selected dates; daily prediction; quarterly refit",
+  "tuning": "2 preset configurations/model except equalweight; pick mean validation RankIC; neural8epochs; no evaluation-period choices",
+  "inputs": "100 signed processed factors plus100 missing flags; 2 common market-state variables for all learned models; equalweight only100 factors",
+  "missing": "at least50 factors available; train median then train scale; no future label filter on prediction rows",
+  "moe": "three small neural experts; softmax gate on lag-free close-known20d index momentum and volatility; descriptive comparator not claimed novel",
+  "primary_metrics": "daily PearsonIC and SpearmanRankIC against raw1d return; HAC and paired equalweight differences; no portfolio returns in this experiment",
+  "limits": "historical sample already viewed; covariance redundancy not independence; fixed100 may include correlated backfill",
+  "corrected_inputs": true,
+  "reused_models": [
+    "equal_weight",
+    "catboost"
+  ],
+  "portfolio_backtest": false
+}

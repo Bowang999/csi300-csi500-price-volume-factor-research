@@ -1,0 +1,9 @@
+{
+  "core_model_functions_identical_to_completed_experiment": true,
+  "published_model_metrics_match_local_results": true,
+  "absolute_private_paths_or_tokens_found": false,
+  "private_raw_factor_prediction_data_included": false,
+  "synthetic_test_cases": 4,
+  "accounting_subchecks": 19,
+  "full_vendor_data_reproduction_executed": false
+}

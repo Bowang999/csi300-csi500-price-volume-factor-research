@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.venv/
+.env*
+private_data/
+outputs/
+data/
+factor_store/
+*.parquet
+*.joblib
+*.pt
+*.xlsx
+*.xls
+*.zip
+.ipynb_checkpoints/
