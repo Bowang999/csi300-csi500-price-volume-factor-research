@@ -161,18 +161,31 @@ def quarter(q,mode,dates,raw,exits,context,stats):
  for name in MODELS[1:]:
   if (folder/(name+'.json')).exists() and (folder/(name+'.parquet')).exists():continue
   atomic_json(OUT/'status.json',{'state':'running','mode':mode,'quarter':str(q),'model':name});start=time.time();scores=[]
+  validation_diagnostics=[]
   for c in range(2):
-   m=fit(name,c,xi,ya.to_numpy());z=pd.Series(predict(name,m,xv),index=v.index);score=float(old.daily_ic(z,raw.reindex(v.index)).mean());scores.append(score);del m;gc.collect()
-  if not np.isfinite(scores).all():raise ValueError('Nonfinite validation RankIC')
-  best=int(np.argmax(scores));m=fit(name,best,xf,yf.to_numpy());z=predict(name,m,xt);assert np.isfinite(z).all()
+   m=fit(name,c,xi,ya.to_numpy());z=pd.Series(predict(name,m,xv),index=v.index)
+   if not np.isfinite(z).all():raise ValueError('Nonfinite validation predictions')
+   daily=old.daily_ic(z,raw.reindex(v.index));score=float(daily.mean());scores.append(score)
+   eligible=pd.DataFrame({'p':z,'y':raw.reindex(v.index)}).dropna().groupby(level='date').p.agg(['size','nunique'])
+   eligible=eligible.loc[eligible['size']>=30]
+   constant=bool(len(eligible)>0 and eligible['nunique'].le(1).all())
+   if not np.isfinite(score) and not constant:raise ValueError('Undefined RankIC not explained by constant eligible cross-sections')
+   validation_diagnostics.append({'candidate':c,'valid_IC_days':int(daily.notna().sum()),'eligible_days':len(eligible),'constant_cross_sections':constant,'status':'valid' if np.isfinite(score) else 'constant_prediction'})
+   del m;gc.collect()
+  valid=np.isfinite(scores)
+  # Undefined constant-prediction candidates cannot win against a valid candidate.
+  # If both are constant, use the preset first candidate and disclose degeneracy.
+  best=int(np.argmax(np.where(valid,scores,-np.inf))) if valid.any() else 0
+  selection_status='valid_candidates_only' if valid.any() else 'all_candidates_constant_default_0'
+  m=fit(name,best,xf,yf.to_numpy());z=predict(name,m,xt);assert np.isfinite(z).all()
   if name in NEURAL:
    import torch
    torch.save({'state_dict':m.cpu().state_dict(),'name':name,'candidate':best},folder/(name+'.pt'))
   elif name=='tabnet':m.save_model(str(folder/'tabnet_model'))
   else:joblib.dump(m,folder/(name+'.joblib'))
   pd.DataFrame({name:z},index=t.index).to_parquet(folder/(name+'.parquet'))
-  atomic_json(folder/(name+'.json'),{'candidate':best,'inner_validation_RankIC':scores,'seconds':time.time()-start});print('FIT',mode,q,name,round(time.time()-start,1),flush=True);del m;gc.collect()
- atomic_json(folder/'completed.json',{'methods':15,'factors':100,'prediction_rows':len(t),'cutoff':str(cutoff),'validation_start':str(valstart),'inner_train_rows':len(a),'final_train_rows':len(f)})
+  atomic_json(folder/(name+'.json'),{'candidate':best,'inner_validation_RankIC':[float(v) if np.isfinite(v) else None for v in scores],'validation_diagnostics':validation_diagnostics,'selection_status':selection_status,'seconds':time.time()-start});print('FIT',mode,q,name,round(time.time()-start,1),flush=True);del m;gc.collect()
+ atomic_json(folder/'completed.json',{'methods':len(MODELS),'factors':100,'prediction_rows':len(t),'cutoff':str(cutoff),'validation_start':str(valstart),'inner_train_rows':len(a),'final_train_rows':len(f)})
 
 def daily_metrics(pred,raw):
  rows={}

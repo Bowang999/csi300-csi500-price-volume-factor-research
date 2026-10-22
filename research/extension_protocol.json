@@ -1,0 +1,14 @@
+{
+  "model_count": 50,
+  "windows": {
+    "historical": "2015-01-05 to 2024-12-27",
+    "new_period": "2025-01-02 to 2026-10-15"
+  },
+  "selection": "Exact corrected original inner/final quarterly selections reused in local extension; equal-weight predictions checked exactly against originals",
+  "public_runner": "Recomputes historical selection from normalized private inputs; includes equal-weight control in every suite",
+  "additional20_neural": "Eight epochs; compact numeric adaptations; CPU two threads",
+  "candidate_policy": "Two candidates selected by historical inner-validation RankIC. Constant-validation candidates have undefined RankIC and cannot beat valid candidates; if both are constant use preset candidate 0 and disclose. Nonfinite predictions or unexplained missing validation correlation stop the run.",
+  "coverage_caveat": "CSI300 ARD: 2373 valid historical days and 370 new-period days; other series coverage is listed explicitly.",
+  "scope": "IC, RankIC and native rank R2 only; no return calibration or model portfolio returns",
+  "limits": "Both periods previously inspected; fifty configurations are not fifty independent algorithm families; no significance or multiple-testing correction claimed"
+}

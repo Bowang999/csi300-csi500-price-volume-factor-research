@@ -27,3 +27,7 @@ Inner validation uses the last 20% of historical dates, purges overlapping label
 Daily IC = Pearson correlation of score and raw forward return. RankIC = Spearman correlation on the same valid cross-section, minimum 30 stocks. Native rank R² = `1 − sum((score − rank_target)^2) / sum(rank_target^2)`; `rank_target = 2 × daily_percentile_rank(return) − 1`, zero-score benchmark. R² is pooled across stock-days, not IC squared. Equal-weight scores are not trained on this target and have a different scale: their large negative native R² is not a fair standalone measure of model inferiority.
 
 The public research folder contains no model portfolio-return experiment and no score-to-return calibration experiment. Negative results are retained. Differences in mean IC are not evidence of statistical superiority without paired tests and appropriate multiple-comparison handling.
+
+## Fifty-model extension
+
+The additional 15 and 20 configurations retain the original feature selection and evaluation protocol. See [extension protocol](../research/extension_protocol.json) for exact control reuse, candidate failures and coverage. The additional neural architectures train for eight epochs. These are related model configurations, not independent discoveries. Both evaluation windows have already been viewed. No statistical superiority or multiple-testing-adjusted winner is claimed. Constant validation predictions have undefined RankIC; select from valid candidates when possible. Preserve missing evaluation correlations and report coverage.

@@ -1,4 +1,4 @@
-"""Prediction only: quarterly training, IC/RankIC and native rank R2."""
+"""Prediction only: select original15, additional15 or additional20; each suite includes an equal-weight control."""
 from pathlib import Path
 import argparse,sys,hashlib,json
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
@@ -7,10 +7,14 @@ import model_pipeline as m
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--universe',choices=['csi300','csi500'],required=True)
-    p.add_argument('--start',default='2015Q1');p.add_argument('--end',default='2024Q4');p.add_argument('--out',type=Path,required=True);p.add_argument('--pilot',action='store_true');a=p.parse_args()
+    p.add_argument('--start',default='2015Q1');p.add_argument('--end',default='2024Q4');p.add_argument('--out',type=Path,required=True);p.add_argument('--pilot',action='store_true');p.add_argument('--suite',choices=['original15','additional15','additional20'],default='original15');a=p.parse_args()
+    if a.suite!='original15':
+        import importlib
+        extra=importlib.import_module('additional_models_'+a.suite.removeprefix('additional'))
+        m.MODELS=['equal_weight']+extra.MODELS;m.fit=extra.fit;m.predict=extra.predict
     m.ROOT=a.root.resolve();m.OUT=a.out.resolve();m.U=a.universe;m.OUT.mkdir(parents=True,exist_ok=True)
     paths=list((m.ROOT/f'factor_store/processed/universe={m.U}').rglob('*.parquet'))+list((m.ROOT/f'data/{m.U}').glob('*.parquet'))+list((Path(__file__).resolve().parents[1]/'src').glob('*.py'))
-    signature={str(x):hashlib.sha256(x.read_bytes()).hexdigest() for x in paths};manifest=m.OUT/'input_hashes.json'
+    signature={str(x):hashlib.sha256(x.read_bytes()).hexdigest() for x in paths};signature['model_suite']=a.suite;manifest=m.OUT/'input_hashes.json'
     if manifest.exists() and json.loads(manifest.read_text())!=signature:raise ValueError('Inputs changed: select a fresh output directory')
     m.atomic_json(manifest,signature)
     dates,raw,exits,ctx=m.labels();qs=dates.to_period('Q').unique();qs=qs[(qs>=pd.Period(a.start))&(qs<=pd.Period(a.end))]
@@ -26,5 +30,5 @@ def main():
         ok=y.notna();err=(predictions.loc[ok,name]-y[ok])**2;den=y[ok]**2
         rows.append({'model':name,'IC':daily[name,'IC'].mean(),'RankIC':daily[name,'RankIC'].mean(),'rank_R2':1-err.sum()/den.sum(),'valid_days':daily[name,'RankIC'].notna().sum()})
     table=pd.DataFrame(rows).sort_values('RankIC',ascending=False);table.to_csv(m.OUT/'comparison.csv',index=False)
-    m.atomic_json(m.OUT/'status.json',{'state':'completed','quarters':len(qs),'models':15,'portfolio_returns':False});print(table.to_string(index=False))
+    m.atomic_json(m.OUT/'status.json',{'state':'completed','quarters':len(qs),'models':len(m.MODELS),'suite':a.suite,'portfolio_returns':False});print(table.to_string(index=False))
 if __name__=='__main__':main()

@@ -1,8 +1,8 @@
 # CSI300 & CSI500 Price–Volume Factor Research
 
-Research on dynamic CSI300 and CSI500 constituents: price–volume factor construction, single-factor backtests, 15-model signal combination, and new-period out-of-sample prediction evaluation.
+Research on dynamic CSI300 and CSI500 constituents: price–volume factor construction, single-factor backtests, 50-model signal combination, and new-period out-of-sample prediction evaluation.
 
-**857 candidate factor fields · 1706 factor–universe backtests · 15 models · 2 universes.** Window variants are not independent signals. This is auditable historical research, not a promise of live returns.
+**857 candidate factor fields · 1706 factor–universe backtests · 50 configurations · 2 universes.** Window variants are not independent signals. This is auditable historical research, not a promise of live returns.
 
 ## Representative single-factor IC and RankIC
 
@@ -22,59 +22,57 @@ Five examples cover momentum (`PV_MOM_20`), volatility (`PV_VOL_20`), turnover v
 
 A negative IC means higher factor values were associated with lower subsequent returns. It does not establish that reversing the factor will generate profitable trades after costs.
 
-## Model-composite IC and RankIC
+## Fifty-model composite IC and RankIC
 
-Every quarter, select **exactly 100 factors using prior realized data**, determine their signs from the training window, tune on historical inner validation, and refit each model. Models learn a cross-sectional return-ranking target; reported IC/RankIC compares their daily scores with **raw forward returns**, not the rank target. IC = Pearson; RankIC = Spearman; both are averaged across valid daily cross-sections (minimum 30 stocks). Scores are not predicted return percentages.
+All 50 configurations have completed both universes and both evaluation windows. Every quarter uses exactly 100 historically selected factors and training-only directions, with inner-validation tuning. Models learn a cross-sectional rank target; IC and RankIC evaluate scores against raw forward one-session VWAP returns. Scores are not return percentages.
 
-### Historical rolling out-of-sample: 2015–2024
+Tables below show the top five by mean RankIC in each panel. Full results retain all 50, including negative metrics. Both periods have been viewed during research, so these are extended comparisons rather than fresh blind holdouts. Related loss-function and architecture variants are explicitly included; the catalog is not fifty independent algorithm families.
 
-Evaluation dates: **2015-01-05–2024-12-27 (2429 sessions)**. This historical window has already been viewed during research; it is not an untouched final holdout. Rows follow CSI300 historical RankIC ordering.
+### CSI300 — 2015–2024 historical rolling evaluation
 
-| Model | CSI300 IC | CSI300 RankIC | CSI500 IC | CSI500 RankIC |
-|---|---:|---:|---:|---:|
-| catboost | 0.03785 | 0.04916 | 0.04875 | 0.06728 |
-| elastic_net | 0.03715 | 0.04881 | 0.04336 | 0.06228 |
-| equal_weight | 0.02627 | 0.03506 | 0.02896 | 0.04715 |
-| ft_transformer | 0.03541 | 0.04749 | 0.04376 | 0.06208 |
-| lasso | 0.03652 | 0.04871 | 0.04189 | 0.06175 |
-| lightgbm | 0.03579 | 0.04568 | 0.04597 | 0.06381 |
-| mlp | 0.03043 | 0.03601 | 0.04429 | 0.05339 |
-| moe | 0.03181 | 0.03843 | 0.04399 | 0.05159 |
-| pca_ridge | 0.03583 | 0.04797 | 0.04065 | 0.05987 |
-| pls | 0.03545 | 0.04708 | 0.04273 | 0.05970 |
-| random_forest | 0.03630 | 0.04754 | 0.04434 | 0.06505 |
-| resnet | 0.02925 | 0.03504 | 0.04194 | 0.05189 |
-| ridge | 0.03656 | 0.04711 | 0.04291 | 0.05978 |
-| tabnet | 0.01982 | 0.02827 | 0.02512 | 0.04463 |
-| xgboost | 0.03767 | 0.04766 | 0.04669 | 0.06457 |
+| model                 |      IC |   RankIC |
+|:----------------------|--------:|---------:|
+| extra_trees           | 0.03679 |  0.05039 |
+| bayesian_ridge        | 0.03800 |  0.05010 |
+| catboost              | 0.03785 |  0.04916 |
+| spline_additive_ridge | 0.03771 |  0.04904 |
+| rbf_random_features   | 0.03706 |  0.04902 |
 
-### New-period evaluation: 2025–2026
+### CSI500 — 2015–2024 historical rolling evaluation
 
-Evaluation dates: **2025-01-02–2026-10-15 (430 sessions)**. The same protocol updates models quarterly using only prior data; models are not permanently frozen at the end of 2024. Predictions continue through 2026-10-19, but final labels are incomplete. Rows follow CSI300 new-period RankIC ordering.
+| model              |      IC |   RankIC |
+|:-------------------|--------:|---------:|
+| catboost           | 0.04875 |  0.06728 |
+| extra_trees        | 0.04311 |  0.06571 |
+| catboost_mae       | 0.04710 |  0.06536 |
+| random_forest      | 0.04434 |  0.06505 |
+| laplacian_nystroem | 0.04017 |  0.06501 |
 
-| Model | CSI300 IC | CSI300 RankIC | CSI500 IC | CSI500 RankIC |
-|---|---:|---:|---:|---:|
-| catboost | -0.00387 | 0.02892 | 0.00355 | 0.04207 |
-| elastic_net | -0.00886 | 0.02171 | -0.00160 | 0.03496 |
-| equal_weight | -0.01083 | 0.02190 | 0.00166 | 0.03992 |
-| ft_transformer | 0.00039 | 0.02729 | 0.00557 | 0.03996 |
-| lasso | -0.01048 | 0.01950 | -0.00469 | 0.03207 |
-| lightgbm | -0.00482 | 0.02562 | 0.00325 | 0.03818 |
-| mlp | -0.00036 | 0.01078 | -0.00159 | 0.01583 |
-| moe | -0.00804 | 0.00662 | -0.00293 | 0.01320 |
-| pca_ridge | -0.00552 | 0.02184 | 0.00372 | 0.03747 |
-| pls | -0.00578 | 0.02041 | 0.00387 | 0.03141 |
-| random_forest | -0.00423 | 0.02827 | 0.00611 | 0.04352 |
-| resnet | -0.00579 | 0.01442 | -0.00172 | 0.02126 |
-| ridge | -0.00553 | 0.02000 | 0.00318 | 0.03049 |
-| tabnet | 0.00009 | 0.01848 | 0.00324 | 0.02972 |
-| xgboost | -0.00574 | 0.02365 | 0.00630 | 0.03996 |
+### CSI300 — 2025–2026 new-period evaluation
 
-CatBoost leads historical mean IC and RankIC in both universes. New-period performance is weaker: CSI300 CatBoost has negative mean Pearson IC despite positive RankIC; Random Forest leads CSI500 RankIC. Both metrics and the deterioration are retained. The representative single factors are not the strongest-single-factor benchmark, and their original signs differ from training-oriented model inputs. These tables alone do **not** establish statistically significant superiority over all single factors or profitable trading.
+| model                  |       IC |   RankIC |
+|:-----------------------|---------:|---------:|
+| extra_trees            | -0.00418 |  0.02983 |
+| bagging_trees          | -0.00014 |  0.02963 |
+| least_angle_regression | -0.00206 |  0.02938 |
+| catboost               | -0.00387 |  0.02892 |
+| laplacian_nystroem     | -0.00567 |  0.02829 |
 
-[Historical metrics](research/results/historical_comparison.csv) · [New-period metrics](research/results/new_period_comparison.csv) · [Full model research, including native rank R²](research/README.md)
+### CSI500 — 2025–2026 new-period evaluation
 
-![Model RankIC comparison](research/figures/rankic_comparison.png)
+| model                   |      IC |   RankIC |
+|:------------------------|--------:|---------:|
+| extra_trees             | 0.00560 |  0.04527 |
+| random_forest           | 0.00611 |  0.04352 |
+| adaboost                | 0.00371 |  0.04326 |
+| huber_gradient_boosting | 0.00571 |  0.04297 |
+| laplacian_nystroem      | 0.00280 |  0.04278 |
+
+Extra Trees leads RankIC in three panels; CatBoost leads historical CSI500. Historical CSI300 Pearson IC is highest for Polynomial Sketch + Ridge, while new-period Pearson IC leaders differ from RankIC leaders. New-period CSI300 top-RankIC models still have negative Pearson IC. Rankings do not establish statistically significant improvement, executable profits, or general model superiority; no fifty-model multiple-testing correction has yet been applied.
+
+Historical coverage is 2429 sessions (2015-01-05–2024-12-27), and new-period coverage is 430 (2025-01-02–2026-10-15), except CSI300 ARD with 2373 and 370 valid IC days. Undefined correlations remain missing. The representative single-factor table above retains original signs and is not a strongest-single-factor benchmark.
+
+[Full 50-model tables and native rank R²](research/README.md) · [All 200 model/market/period results](research/results/all_50_models_comparison.csv) · [Model catalog](research/model_catalog.json)
 
 ## Research pipeline
 
@@ -85,7 +83,7 @@ flowchart LR
  C --> D[MAD clipping, industry-size neutralization, standardization]
  D --> E[Single factors: 1 / 5 / 20-session rebalancing]
  D --> F[Quarterly historical selection of 100 factors]
- F --> G[15-model prediction]
+ F --> G[50-model prediction]
  G --> H[IC, RankIC and native rank R-squared]
  H --> I[2025-2026 new-period evaluation]
 ```
@@ -98,7 +96,7 @@ flowchart LR
 | Factor, backtest and model methodology | [Methodology](docs/METHODOLOGY.md) |
 | Formula and field catalogs | [Factor catalog](factors/catalog.json), [report formulas](factors/report_formulas.json) |
 | Single-factor periods and rebalancing frequencies | [Backtests](backtests/README.md) |
-| Historical and new-period 15-model results | [Research](research/README.md) |
+| Historical and new-period 50-model results | [Research](research/README.md) |
 | Interactive results notebook | [Results explorer](notebooks/results_explorer.ipynb) |
 
 ## Installation and usage
@@ -129,7 +127,7 @@ python scripts/train_models.py --root PRIVATE_ROOT --universe csi300 --start 201
 python scripts/train_models.py --root PRIVATE_ROOT --universe csi300 --start 2025Q1 --end 2026Q4 --out outputs/csi300_new_period
 ```
 
-The 15 models are Equal Weight, Ridge, Lasso, Elastic Net, PCA + Ridge, PLS, Random Forest, XGBoost, LightGBM, CatBoost, MLP, ResNet, TabNet, FT-Transformer and Mixture of Experts (MoE).
+The original 15 models are Equal Weight, Ridge, Lasso, Elastic Net, PCA + Ridge, PLS, Random Forest, XGBoost, LightGBM, CatBoost, MLP, ResNet, TabNet, FT-Transformer and Mixture of Experts (MoE).
 
 ## Versions and reproducibility
 
@@ -144,3 +142,14 @@ The public refactor preserves core formulas, preprocessing, model architectures,
 Included: formulas, implementations, input documentation and aggregate results. Excluded: vendor spreadsheets, raw prices, stock-level factors/predictions, model weights, brokerage PDFs and unrelated experiments. The `research` folder evaluates prediction only; it contains neither model portfolio-return backtests nor historical score-to-return calibration results.
 
 Original code is licensed under [MIT](LICENSE). Qlib attribution and notices are retained in [THIRD_PARTY.md](THIRD_PARTY.md). This license does not grant redistribution rights to vendor datasets, source reports or external dependencies.
+
+## Running the added model suites
+
+Use separate output directories per suite. Each added suite also computes an equal-weight control; that control is not an additional unique model. The local published extension reused audited original selections; the portable runner recalculates the same selection protocol from normalized private inputs.
+
+```bash
+python scripts/train_models.py --root PRIVATE_ROOT --universe csi300 --suite additional15 --start 2015Q1 --end 2024Q4 --out outputs/csi300_additional15 --pilot
+python scripts/train_models.py --root PRIVATE_ROOT --universe csi500 --suite additional20 --start 2025Q1 --end 2026Q4 --out outputs/csi500_additional20 --pilot
+```
+
+Remove `--pilot` for all requested quarters. The default suite remains `original15`. Neural adaptations and fixed parameter candidates are documented in the source; limited compute budgets are part of the experiment.
